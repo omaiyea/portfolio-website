@@ -1,0 +1,441 @@
+* {
+    box-sizing: border-box;
+}
+
+/****** stying for fonts faces, sizes, decorations, colors ******/
+h2, h3, h4, h5{
+    font-family: 'Open Sans', serif;
+    font-weight: 700;
+    color: #424243;
+}
+
+h2{
+    font-size: 3em;
+}
+
+section h2, section h3, section h4, section h5{
+    text-align: center;
+    font-weight: 900;
+}
+
+h3{
+    font-size: 2em;
+}
+
+h4{
+    font-size: 1.5em;
+}
+
+h5{
+    font-size: 1.2em;
+}
+
+p, main a, button{
+    font-family: 'Nunito', sans-serif;
+    font-size: 20px;
+}
+
+sub{
+    font-family: 'Nunito', sans-serif;
+    font-size: 15px;
+}
+
+.sub-div{
+    padding: 0px 45px;
+}
+
+nav{
+    font-family: 'Nunito', sans-serif;
+    font-size: 15px;
+}
+
+p {
+    color: #424243;
+}
+
+footer p{
+    font-size: 15px;
+    color: white;
+    display: inline;
+    padding-left: 20px;
+}
+
+#about p{
+    padding: 0px 0.5em;
+    line-height: 1.5;
+}
+
+main a {
+    color: #014082;
+    font-weight: bolder;
+}
+
+main a:hover{
+    color: #254f4a;
+    transition: 0.5s;
+}
+
+nav a{
+    text-transform: uppercase;
+}
+
+b{
+    color: #014082;
+}
+
+nav a{
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.display-menu li {
+    padding: 10px 0px;
+    list-style-type: none;
+}
+
+main i {
+    color: #014082;
+}
+
+/**** initial header styling ****/
+#head{
+    background-color: #001F3F;     /*zeroing out the default margins with top/etc causes the nav bar to jump*/
+    margin: 0;
+    padding: 0;
+    /*but there was still whitespace even when using the above to remove it so needed to add these two*/
+    top: 0;
+    left: 0;
+    height: 100vh;
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+}
+
+#head h2, #head p, button{
+    color: #eee;
+    margin-left: 50px;
+}
+
+#head h2 {
+    margin-top: 250px;
+}
+
+#head h2, #head p{
+    margin-right: 50px 
+}
+
+button{
+    background-color: #001F3F;
+    border: 1px solid #eee;
+    padding: 0.5em 1.5em;
+    margin-top: 10px;
+    max-width: 150px;
+}
+
+button:hover{
+    cursor: pointer;
+    color: darkgrey;
+    border: 1px solid darkgrey;
+    transition: 0.5s;
+}
+
+#nav-buttons{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+}
+
+/*** footer styling***/
+footer{
+    background-color: #001F3F;
+    color: white;
+    padding-bottom: 20px;
+    padding-right: 10px;
+    padding-top: 20px;
+}
+
+footer i{
+    margin: 0;
+    float: right;
+    padding-left: 10px;
+    color: white;
+}
+
+/*** nav bar styling  ***/
+nav{
+    background-color: #001F3F;
+    width: 100%;
+    /*zeroing out the default margins with top/etc causes the nav bar to jump*/
+    margin: 0;
+    padding: 0;
+    /*but there was still whitespace even when using the above to remove it so needed to add these two*/
+    left: 0;
+    right: 0;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    height: 75px;
+}
+
+/*hamburger icon container styles */
+nav i{
+    padding: 22px 0px 0px 12px;
+    display: block;
+    color: #ffffff;
+}
+
+nav i:hover{
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+/*hide menu items by default for mobile*/
+ul, nav, .hidden{
+    display: none;
+}
+
+/*unless this class is turned on in the js file*/
+.display-menu{
+    display: block;
+    background-color: #001F3F;
+    margin-top: 1px;
+    padding: 15px 0px 15px 15px;
+}
+
+main{
+    padding: 740px 0px 0px 0px; /**different browsers display the top height differently....**/
+    margin: 0;
+}
+
+body{
+    margin: 0px;
+}
+
+/***** styling for elements that need to be centered *****/
+img{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/***** padding on mobile ****/
+
+/**** more padding for the text sections ****/
+#about{
+    padding: 0em 2em 2em 2em;
+}
+
+.question{
+    cursor: pointer;
+    padding: 5px;
+    border: 1px solid darkgrey;
+}
+
+.question:hover{
+    background-color: #ddd;
+}
+
+#questions{
+    background-color: #eee;
+    padding: 1px 0px;
+    width: 85%;
+    margin: auto;
+}
+
+/** code based on code from w3 **/
+/* Container for skill bars */
+  .bar-container {
+    width: 100%; /* Full width on mobile*/
+    background-color: #eee; /* Grey background */
+  }
+  
+  .bar {
+    text-align: right; /* Right-align text */
+    color: white; /* White text color */
+    background-color: #014082;
+    width: 0%;
+  }
+
+  /* The actual timeline (the vertical ruler) */
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* The actual timeline (the vertical ruler) */
+  .timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: #014082;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+  }
+  
+  /* Container around content */
+  .timeline-container {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+  }
+  
+  /* The circles on the timeline */
+  .timeline-container::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -17px;
+    background-color: #014082;
+    border: 4px solid #014082;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+  }
+  
+  /* Place the container to the left */
+  .left {
+    left: 0;
+  }
+  
+  /* Place the container to the right */
+  .right {
+    left: 50%;
+  }
+  
+  /* Add arrows to the left container (pointing right) */
+  .left::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border: medium solid #eee;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent #eee;
+  }
+  
+  /* Add arrows to the right container (pointing left) */
+  .right::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border: medium solid #eee;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent #eee transparent transparent;
+  }
+  
+  /* Fix the circle for containers on the right side */
+  .right::after {
+    left: -16px;
+  }
+  
+  /* The actual content */
+  .timeline-content {
+    padding: 20px 30px;
+    background-color: #eee;
+    position: relative;
+    border-radius: 6px;
+  }
+
+@media only screen and (min-width: 800px){
+
+    #nav-buttons{
+        flex-direction: row;
+    }
+
+    nav ul{
+        text-align: center;
+        padding: 15px 30px 0px 0px;
+        display: block;
+    }
+    
+    /*display menu items horizontally rather than verically for desktop to better use room*/
+    nav li{
+        display: inline-block;
+        padding: 0px 10px;
+    }
+    
+    /*user will only be hovering/seeing active page with mouse aka larger screen*/
+    nav li.active-page{
+        border-bottom: 2px solid #eee;
+        padding-bottom: 5px;
+        margin-bottom: -5px; /*make resume jump down less when clicked*/
+    }
+    
+    nav a:hover{
+        color: #eee;
+        transition: 0.5s;
+    }
+
+    /*for some reason, hiding the icon doesn't work on its own*/
+    .display-icon{
+        display: none;
+    }
+
+    blockquote{
+        border-left: 5px solid #014082;
+    }
+
+    #work blockquote p{
+        padding-left: 80px;
+    }
+
+    /*** add padding for each section ***/
+    #about p{
+        padding: 0em 5em;
+    }
+
+    #about, #skills{
+        padding: 0em 3em;
+        margin: 0;
+    }
+
+    .bar-container{
+        width: 90%; /* Full width on mobile*/
+        margin: auto;
+    }
+
+}
+/** from w3 for timeline**/
+/* Media queries - Responsive timeline on screens less than 600px wide */
+@media screen and (max-width: 600px) {
+/* Place the timelime to the left */
+  .timeline::after {
+    left: 31px;
+  }
+
+/* Full-width containers */
+  .timeline-container {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+
+/* Make sure that all arrows are pointing leftwards */
+  .timeline-container::before {
+    left: 60px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+  }
+
+/* Make sure all circles are at the same spot */
+  .left::after, .right::after {
+    left: 15px;
+  }
+
+/* Make all right containers behave like the left ones */
+  .right {
+    left: 0%;
+  }
+}
